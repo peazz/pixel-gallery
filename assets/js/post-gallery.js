@@ -77,10 +77,7 @@
 				$container.isotope('reveal', iso.items );
 			} // end isoptop
 			
-			// init lightbox
-			$(function() {
-				$('a[data-rel^=lightcase]').lightcase();
-			});
+
 			
 		});
 		
