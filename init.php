@@ -59,7 +59,6 @@ class Pixel_Galleries {
 		      <span><?php _e( 'Gallery Style' ); ?></span>
 		      <select data-setting="bj_style">
 		        <option value="slider" selected><?php _e( 'Slideshow Style' ); ?></option>
-		        <option value="masonry"> <?php _e( 'Masonry Block Style' ); ?> </option>
 		      </select>
 		    </label>
 
@@ -289,11 +288,9 @@ class Pixel_Galleries {
 	static function load_scripts() {
 
 		if(is_single() || is_page()){
-			
-			wp_register_script( 'lightbox', plugin_dir_url( '', __FILE__ ) . 'bj-plugins/pixel-gallery/assets/js/lightcase.js', array(), '1.0.0', true );
-			wp_enqueue_script( 'lightbox' ); // Enqueue it!
 
-			wp_register_script( 'post-gallery', plugin_dir_url( '', __FILE__ ) . 'bj-plugins/pixel-gallery/assets/js/post-gallery.js', array(), '1.0.0', true );
+
+			wp_register_script( 'post-gallery', plugin_dir_url( __FILE__ ) . 'assets/js/post-gallery.js', array(), '1.0.0', true );
 			wp_enqueue_script( 'post-gallery' ); // Enqueue it!
 
 		}
@@ -308,11 +305,6 @@ class Pixel_Galleries {
 
 		if(is_single() || is_page()){
 
-			wp_register_style( 'bj-lightbox', plugin_dir_url( '', __FILE__ ) . 'bj-plugins/pixel-gallery/assets/css/lightcase.css', array(), '1.0', 'all' );
-			wp_register_style( 'bj-masonry-gallery', plugin_dir_url( '', __FILE__ ) . 'bj-plugins/pixel-gallery/assets/css/masonry-gallery.css', array(), '1.0', 'all' );
-
-			wp_enqueue_style( 'bj-lightbox' ); // Enqueue it!
-			wp_enqueue_style( 'bj-masonry-gallery' ); // Enqueue it!
 
 		}
 

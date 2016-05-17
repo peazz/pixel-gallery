@@ -12,8 +12,8 @@
     text-transform: capitalize;
 }
 .masonry-gallery.row {
-	position:relative;
-	margin:0;
+    position:relative;
+    margin:0;
 }
 .masonry-gallery .masonry-item {
     padding: 0 2.5px !important;
@@ -30,7 +30,7 @@
     cursor:pointer;
 }
 .masonry-item:hover > a {
-	display:block;
+    display:block;
 }
 .masonry-item > a .fa {
     background: white none repeat scroll 0 0;
@@ -42,4 +42,9 @@
     text-align: center;
     top: 50%;
     width: 50px;
+}
+
+.gallery-selector {
+    padding:20px !important;
+    margin:0 !important;
 }
